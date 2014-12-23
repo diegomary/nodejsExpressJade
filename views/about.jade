@@ -1,0 +1,23 @@
+extends layout
+block title
+  title My About Page
+block content
+  div.container
+    div.content
+        ul(style="list-style: none;margin:0;padding:0") 
+          - each app in list
+            div
+                li
+                  div
+                    span 
+                        button(class="btn-danger") Update
+                        input(type="text" value = "#{app}" style="background-color:blue;color:white")                        
+    div.footer      
+        ul(style="list-style: none;margin:0;padding:0") 
+          - each cat,index in test.Categories
+            div
+                li
+                  div
+                    span                        
+                        input(type="text" value = "#{cat.CategoryName}" style="background-color:blue;color:white")                        
+                        button(data-id="#{index + 'dmm888com'}" onclick="doSomething(this)" class="btn-danger") #{index}

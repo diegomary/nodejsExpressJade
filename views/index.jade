@@ -1,0 +1,16 @@
+extends layout
+block title
+  title My Home Page
+block content
+  div.container
+    div.content
+        ul(style="list-style: none;margin:0;padding:0") 
+          - each app in list
+            div
+                li
+                  div
+                    span 
+                        button(class="btn-danger") Update
+                        input(type="text" value = "#{app}" style="background-color:blue;color:white")                        
+    div.footer
+        button(class="btn-danger") This is a button to press

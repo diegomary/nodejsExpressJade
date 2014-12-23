@@ -1,3 +1,3 @@
 function doSomething(el){
-	alert(el.innerHTML);
+	alert(el.getAttribute('data-id'));
 }

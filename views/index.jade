@@ -6,8 +6,8 @@ block content
  include scripts   
   div.container
     div(ng-app="module88" ng-controller="corecontroller as corectrl")
-        p  {{corectrl.concatenate()}}
-        p  {{corectrl.concatenate()}}
+        p(id='parId')  {{corectrl.concatenate()}}
+        p(id='parId1')  {{corectrl.concatenate()}}
         p  {{testScope}}
         p  {{'Angularjs ver 1.29'}}
         ul(style="list-style: none;margin:0;padding:0") 
@@ -19,4 +19,9 @@ block content
                         button(class="btn-danger") Update
                         input(type="text" value = "#{app}" style="background-color:blue;color:white")                        
     div.footer
-        button(class="btn-danger") This is a button to press
+        button(class="btn-danger") This is a button to press        
+        script(type="text/javascript").  //- the syntax for a comment
+             var done= function(){
+             var uu = $("#parId").text('Hello hello hello hello'); 
+             var uu = $("#parId1").text('Hello1 hello1 hello1 hello1');}
+        button(onclick="done()") Press me now

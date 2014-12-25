@@ -12,3 +12,19 @@ div.centre
       margin-right: auto;
       margin-top:5px;
     }
+
+ .loginInvisible
+ {
+	display:none;
+ } 
+
+  .loginVisible
+ {
+	display:block;
+ }  
+
+
+ .textStyle{
+
+ 	color:red;
+ } 

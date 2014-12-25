@@ -7,9 +7,8 @@ block content
     div.container
         div.row
             div.col-sm-6.col-md-4.col-md-offset-4
-                h1.text-center #{name}
-                h1.text-center.login-title Sign in
-                 h1.text-center #{currentSession}
+                h3.text-center #{name}
+                h3.text-center.login-title Sign in               
                     p &nbsp
                     div.account-wall
                         img(class='profile-img', src='https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=120')
@@ -21,6 +20,4 @@ block content
                             button(class='btn btn-lg btn-primary', type='submit') Sign in
                             span.clearfix
                     a(href='/signup', class='text-center new-account',style="font-size:small") Create an account
-                    #message
-                    if message
-                        h1.text-center.error-message #{message}    
+                   

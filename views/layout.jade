@@ -3,12 +3,14 @@ html
 head
 script(src='/javascripts/jquery.js')
 script(src='/javascripts/angular.min.js')
+script(src='/javascripts/module88.js')
 link(rel='stylesheet', href='/javascripts/bootstrap/css/bootstrap.min.css')
 link(rel='stylesheet', href='/javascripts/bootstrap/css/bootstrap-theme-min.css')
 script(src='/javascripts/bootstrap/js/bootstrap.min.js')
+script(src='/javascripts/core.js')
 block title
     title The best website in the world
-body
+body(ng-app="module88")
    div.centre
       div.navbar.navbar-default(role='navigation')
           .container
@@ -27,8 +29,8 @@ body
                   a(href='#about') About
                 li
                   a(href='#contact') Contact
-                li
-                  a(class='btn btn-info' href='/login')  log in  
+                li(ng-controller="headercontroller as headerctrl")                
+                  a(href='/login' ng-show="headerctrl.noLogged")  log in                 
                 li.dropdown
                   a.dropdown-toggle(href='#', data-toggle='dropdown')
                     | Various

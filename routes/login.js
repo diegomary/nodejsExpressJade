@@ -8,15 +8,14 @@ if (req.session.userName) {
 	res.redirect('/welcome')
 	 	}
   	else{
-  		res.render('login', { name: "Diego Aldo Burlando",currentSession: "Session Uninitialized" });
+  		res.render('login', { name: "Diego login page"});
   	}	
 });
 
-router.post('/',function(req,res){
-  var user_name=req.body.username;
-  var password=req.body.password;
-  req.session.userName = user_name;
-  console.log("User name = "+user_name+", password is "+password);
+router.post('/',function(req,res){ 
+  req.session.userName = req.body.username;
+  req.session.password = req.body.password; 
+  req.session.isnotLogged = false; 
   res.redirect('/welcome')
 });
 

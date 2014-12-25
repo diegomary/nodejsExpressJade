@@ -2,5 +2,8 @@ extends layout
 block title
   title Welcome &nbsp; #{currentSession}
 block content 
-  h2 Welcome &nbsp; #{currentSession}
+ include styles
+ include scripts   
+  div.centre
+    h2 Welcome &nbsp; #{currentSession}
  

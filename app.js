@@ -43,6 +43,17 @@ app.use('/users', users);
 app.use('/about', about);
 app.use('/login', login);
 app.use('/welcome', welcome);
+
+app.get('/getauthstatus', function(req, res) {
+    console.log("**************************************");
+    var authenticatedReport = { status:req.session.isnotLogged, userName:req.session.userName, passWord:req.session.password };
+   // res.send(req.session.isnotLogged); 
+    res.send(authenticatedReport);
+    var status = req.session.isnotLogged == true ? "Not Authenticated" : "Authenticated"; 
+    console.log("Authentication status: ".concat(status));  
+
+});
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
     var err = new Error('Not Found');

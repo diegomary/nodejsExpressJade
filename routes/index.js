@@ -3,9 +3,8 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res) {	
-	var alpHa="This is an important test";
-	var myArray=[1,2,"Hello from",4,5,6,7,8,"This is a test"];
-	res.render('index', { list: myArray});	
+	var homePageInfo=["Welcome to Diego's Web Site", "this is a demo web application","written in Node.JS","a basic setup skeleton"];
+	res.render('index', { homepageinfo: homePageInfo });	
 });
 
 

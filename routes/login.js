@@ -12,7 +12,6 @@ if (req.session.userName) {
   	}	
 });
 
-
 router.post('/',function(req,res){
   var user_name=req.body.username;
   var password=req.body.password;

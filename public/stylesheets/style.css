@@ -1,8 +1,14 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+.serialInfo
+{
+color: violet;
+font-weight: bolder;
 }
 
-a {
-  color: #00B7FF;
-}
+div.centre
+    {
+      width: 96%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top:5px;
+    }

@@ -1,9 +1,9 @@
  angular.module('module88', [])
   .controller('corecontroller', function ($scope) {
-			this.firstName = "Diego Aldo";       
-            this.lastName="Burlando";
-            $scope.testScope="This is a test on scope";
-            this.concatenate=function(){
-            return this.firstName.concat(" ",this.lastName);
+			this.firstInfo = "Angularjs has been setup";       
+            this.lastInfo="to work with Jade view render engine";
+            $scope.angularInfo="Here Angularjs works with the new features of controller instantiation";
+            this.fullInfo=function(){
+            return this.firstInfo.concat(" ",this.lastInfo);
             } 
       });      

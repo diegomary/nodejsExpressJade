@@ -12,6 +12,8 @@ var users = require('./routes/users');
 var about = require('./routes/about');
 var login = require('./routes/login');
 var welcome = require('./routes/welcome');
+// The following controller checks if an user is authenticated
+var apiloginstatus= require('./routes/apiloginstatus')
 // Injection of JSON data in about page
 about.production=production;
 // Express Initialization
@@ -43,16 +45,7 @@ app.use('/users', users);
 app.use('/about', about);
 app.use('/login', login);
 app.use('/welcome', welcome);
-
-app.get('/getauthstatus', function(req, res) {
-    console.log("**************************************");
-    var authenticatedReport = { status:req.session.isnotLogged, userName:req.session.userName, passWord:req.session.password };
-   // res.send(req.session.isnotLogged); 
-    res.send(authenticatedReport);
-    var status = req.session.isnotLogged == true ? "Not Authenticated" : "Authenticated"; 
-    console.log("Authentication status: ".concat(status));  
-
-});
+app.use('/getauthstatus',apiloginstatus)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

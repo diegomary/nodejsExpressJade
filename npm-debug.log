@@ -1,7 +1,7 @@
 0 info it worked if it ends with ok
 1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'start' ]
 2 info using npm@1.4.28
-3 info using node@v0.10.33
+3 info using node@v0.10.35
 4 verbose node symlink /usr/bin/node
 5 verbose run-script [ 'prestart', 'start', 'poststart' ]
 6 info prestart firstTest@0.0.0
@@ -20,8 +20,8 @@
 11 error There is likely additional logging output above.
 12 error System Linux 3.13.0-43-generic
 13 error command "/usr/bin/node" "/usr/bin/npm" "start"
-14 error cwd /home/diegomary/Desktop/JadeExample
-15 error node -v v0.10.33
+14 error cwd /home/diegomary/Desktop/nodejsExpressJade
+15 error node -v v0.10.35
 16 error npm -v 1.4.28
 17 error code ELIFECYCLE
 18 verbose exit [ 1, true ]

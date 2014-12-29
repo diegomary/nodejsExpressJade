@@ -12,6 +12,7 @@ var users = require('./routes/users');
 var about = require('./routes/about');
 var login = require('./routes/login');
 var welcome = require('./routes/welcome');
+var signup = require('./routes/signup');
 // The following controller checks if an user is authenticated
 var apiloginstatus= require('./routes/apiloginstatus')
 // Injection of JSON data in about page
@@ -46,6 +47,7 @@ app.use('/about', about);
 app.use('/login', login);
 app.use('/welcome', welcome);
 app.use('/getauthstatus',apiloginstatus)
+app.use('/signup',signup)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
